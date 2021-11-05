@@ -28,8 +28,10 @@ function App() {
   }
 
 
+
+
   const addTodo = (title, desc, status, initDate, deadline,FDate) => {
-    console.log('Add this title :- ', title, ' & desc :- ', desc)
+  
     let sno;
     if (todos.length === 0) {
       sno = 1;
@@ -46,32 +48,27 @@ function App() {
       deadline: deadline,
       FinishedDate:FDate
     }
-
     setTodos([...todos, myTodo])
-    console.log(myTodo)
   }
 
 
 
   const onDelete = (todo) => {
-    console.log('Precisely its deleted', todo)
-
-    setTodos(todos.filter((e) => {
+   setTodos(todos.filter((e) => {
       return e !== todo
     }));
-    console.log("deleted", todos)
+
     localStorage.setItem("todos", JSON.stringify(todos));
   }
 
 
+
   const onEdit = (todo) => {
-    console.log('Precisely its Edited', todo)
 
     var date = new Date();
     var dd = String(date.getDate()).padStart(2, '0');
     var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = date.getFullYear();
-
     date = mm + '/' + dd + '/' + yyyy;
   
 
@@ -82,12 +79,7 @@ function App() {
         setTodos([...todos])
       }
     })
-
-    console.log(todos)
-
     localStorage.setItem("todos", JSON.stringify(todos));
-    let c = localStorage.getItem('todos')
-    console.log(c)
   }
 
 

@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom'
 import illustration from './illustration.jpg'
 
 export const About = () => {
-    // let piston={
-    //     display:'grid',
-    //     gridAutoColumn: '1fr 1fr',
-        
-    // }
+
+
+    
     return (
         <div style={{ width: '70%', margin: 'auto', marginTop: '2em' }}>
             <h3 className='text-center my-3' style={{ fontFamily: "'Patrick Hand', cursive", fontSize: '5em', fontWeight: '500',}}>About Section of ToDo's</h3><hr />

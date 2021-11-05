@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaEdit } from "react-icons/fa"
 import { FaTrash } from "react-icons/fa"
 import { FaCheck } from "react-icons/fa"
 
@@ -72,6 +71,8 @@ export const TodoItem = ({ todo, onDelete, onEdit , index }) => {
         padding: '10px'
 
     }
+
+    
     return (
         <tr className='' style={listItem}>
             <td style={tableitems}>{index}</td>
