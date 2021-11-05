@@ -4,11 +4,7 @@ import { TodoItem } from './TodoItem'
 
 export const Todos = (props) => {
 
-
-
     let Todos = props.todos
-
-
     let typeArr = [];
     Todos.map((todo) => {
         if (todo.status === 'TO Start') {
